@@ -20,7 +20,7 @@ class FASTQ:
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print(f"#usage: python {sys.argv[0]} {fasta}")
+        print(f"#usage: python {sys.argv[0]} {fastq}")
         sys.exit()
     file_name = sys.argv[1]
     t = FASTQ(file_name)

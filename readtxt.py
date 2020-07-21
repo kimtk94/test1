@@ -36,7 +36,7 @@ def read_csv(file_name: str) -> str:
             ret.append(d)
     return ret
 
-def read_tsv(file_name: str) -> str:
+def read_tsv(file_name: str) -> list:
     ret = []
     with open(file_name, 'r') as handle:
         for line in handle:

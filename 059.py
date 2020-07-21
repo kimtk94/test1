@@ -1,12 +1,19 @@
-import sys
+f = '059.fasta'
 
-ret = ''
-def read_txt(file_name : str) -> str:
-    with open(file_name, 'r') as handle:
-        for line in handle:
-            if line.startswith('>'):
-                continue
-            else:
-                ret += line.strip()
+A, C, G, T = 0, 0, 0, 0
 
-print(ret)
+with open(f, 'r') as handle:
+    for line in handle:
+        if line.startswith(">"):
+            header = line.strip()
+        else:
+            seq = line.strip()
+            A += seq.count('A')
+            C += seq.count('C')
+            G += seq.count('G')
+            T += seq.count('T')
+            
+print(f"A: {A}")
+print(f"C: {C}")
+print(f"G: {G}")
+print(f"T: {T}")

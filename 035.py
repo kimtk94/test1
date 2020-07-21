@@ -10,8 +10,6 @@ def read_txt(file_name: str) -> str:
             ret += lin.strip()
     return ret
 
-    return ret
-
 if __name__ == '__main__'
     if len(sys.argv) != 2:
         print("#usage: python {sys.argv[0]} [txt]")
